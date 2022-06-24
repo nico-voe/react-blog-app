@@ -1,22 +1,15 @@
 import { useState } from 'react'
 
 function Home() {
-  // let name = 'nico'
-
-  const [name, setName] = useState('nico')
-
-  const [age, setAge] = useState(25)
-
-  const handleClick = () => {
-    setName('not nico')
-    setAge(100)
-  }
+  const [blogs, setBlogs] = useState([
+    { title: 'My new website', body: 'lorem ipsum...', author: 'mario', id: 1 },
+    { title: 'Welcome party!', body: 'lorem ipsum...', author: 'yoshi', id: 2 },
+    { title: 'Web dev top tips', body: 'lorem ipsum...', author: 'mario', id: 3 }
+  ])
 
   return (
     <div className="home">
-      <h2>Homepage</h2>
-      <p>I am {name} and {age}</p>
-      <button onClick={handleClick}>Click Me</button>
+
     </div>
   )
 }
